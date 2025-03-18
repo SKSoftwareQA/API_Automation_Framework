@@ -2,7 +2,8 @@ name: Scheduled Run
 
 on:
   schedule:
-    - cron: '0 2 * * *'  # Runs at 2:00 AM every day
+    - cron: '25 11 * * *'  # Runs at 16:55 IST (11:25 UTC) every day
+  workflow_dispatch:  # Allows manual triggering
 
 jobs:
   run-script:
