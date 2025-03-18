@@ -14,6 +14,7 @@ class TestAPIRequests:
         response_data = response.json()
         assert response_data["id"] == 1
         assert response_data["title"] == "sunt aut facere repellat provident occaecati excepturi optio reprehenderit"
+        print("Get API Passed")
 
     def test_post_request(self, api_request_context):
         """Test POST request to create a new post"""
@@ -34,6 +35,7 @@ class TestAPIRequests:
         response_data = response.json()
         assert response_data["id"] == 101
         assert response_data["title"] == "foo"
+        print("POST API Passed")
 
     def test_put_request(self, api_request_context):
         """Test PUT request to update a post"""
@@ -48,6 +50,7 @@ class TestAPIRequests:
 
         response_data = response.json()
         assert response_data["title"] == "cool"
+        print("PUT API Passed")
 
     def test_delete_request(self, api_request_context):
         """Test DELETE request to remove a post"""
@@ -56,4 +59,5 @@ class TestAPIRequests:
         assert response.status == 200
         assert response.ok
         assert response.json() == {}
+        print("Delete API Passed")
         
